@@ -1,0 +1,47 @@
+.column
+{
+  float: left;
+  width: 50%;
+}
+
+form h1
+{
+  padding-left: 150px;
+}
+
+textarea
+{
+  border: 3px solid #0b8bc3;
+  border-radius: 8px;
+  font-size: 14px;
+  padding-top: 5px;
+  margin-left: 120px;
+}
+
+.btn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=text] 
+{
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.upload-btn-wrapper input[type=submit] {
+  overflow: hidden;
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}

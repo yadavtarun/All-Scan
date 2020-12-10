@@ -1,0 +1,49 @@
+#container
+	{
+		height:900px;
+		width:1325px;
+		background: #f7f8f9;
+		margin:auto;
+	}
+	#header
+		{
+			height:100px;
+			width: 1325px;
+			background-color:#0b8bc3;
+		}
+	#menu
+		{
+			height:200px;
+			width: 1000px;
+			float: left;
+		}
+	#menu ul
+		{
+			margin-top:35px;
+			margin-left: 15px;
+
+		}
+	#menu ul li
+		{
+			display:inline;
+			padding:15px;
+			font-size:18;
+		}
+	#menu ul li a
+		{
+			text-decoration:none;
+			color: #fff;
+			text-transform: uppercase;
+			font-size: 14px;
+		    font-weight: 600;
+		    line-height: 45px;
+		    position: relative;
+    		padding: 16px;
+    		font-family: muli,arial,helvetica,sans-serif;
+		}
+
+	#menu ul li a:hover
+	{
+		box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	

@@ -1,0 +1,55 @@
+hr.new
+{
+  border-top: 1px dashed #686868;
+  margin-top: 410px;
+}
+
+#head
+{ 
+  width: 800px;
+  height: 150px;
+  margin-left: 260px;
+}
+#cont
+{
+  width:600px;
+  height:300px;
+  margin-left: 360px;
+  background:#fb941d;
+  float:left;
+  border:4px solid #c96d03;
+  outline: 1px dashed #4b2902;
+  outline-offset: -10px;
+}
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.upload-btn-wrapper input[type=submit] {
+  overflow: hidden;
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
