@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <title>About Us</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+  <link rel="icon" type="image/png" href="https://image.freepik.com/free-vector/letter-logo-design-template_23987-86.jpg">
+  <style>
+    .column
+    {
+      float: left;
+      width: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container" style="height: 600px;">
+    <div id="header">
+      <div id="ascan" style="float: left; height:100px; width: 200px; background-color: white;">
+      <div style="float: left">
+        <img src="https://image.freepik.com/free-vector/letter-logo-design-template_23987-86.jpg" height="90px;" width="80px;">
+        </div>
+        <div style="width:200px;font-family: muli,arial,helvetica,sans-serif; font-size: 30px; font-weight:600; margin-top:32px;margin-left: 60px; color: #0b8bc3">AllScan</div>
+    </div>
+      <div id="menu" style="height : 150px;">
+        <ul>
+          <li><a href="{{ url_for('imagetotext') }}">Text Scanner</a></li>
+          <li><a href="{{ url_for('imagetopdf') }}">PDF Convertor</a></li>
+          <li><a href="{{ url_for('tsum') }}">Text Summarizer</a></li>
+          <li><a href="{{ url_for('qr') }}">QR Code Scanner</a></li>
+          <li><a href="{{ url_for('about') }}">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+  <div id="tsum-cont" style="height: 510px; width: 1325px;">
+    <div id="left" class="column">
+      <h1 style="margin-left:250px; font-family: muli,arial,helvetica,sans-serif;">About Us</h1>
+      <p style="width: 500px; margin-left: 70px; font-family: muli,arial,helvetica,sans-serif;">
+      In our day-to-day life we encounter many problems related to documentation such as generating Portable Document Files, Image to text conversion, text summarization and scanning a QR code for getting details of a product. Technology has been able to resolve these tasks but many a times we get confused and irritated with different types of software applications being installed on our mobile phones and computers for each task and we need to switch from one application to another for different task. Apart from above mentioned problems many companies also try to steal your data by asking about your email and generating account or linking account but as ALL SCAN is a website customer need not to worry about the stealing of his data and can easily use our services at one go on ALL SCAN which is developed to get rid of confusion and irritation and to provide you all functionality required at one place. This is a web application which uses images and text to process and generate the desired output.
+    </p>
+    </div>
+    <div id="right" class="column">
+      <h1 style="margin-left:250px; font-family: muli,arial,helvetica,sans-serif;">Contact Us</h1>
+      <ul style="font-family: muli,arial,helvetica,sans-serif; list-style-type: none; margin-left: 200px; margin-top: 30px;">
+        <li>Tarun Yadav<a href="mailto:tarunyadav1999.ty@gmail.com"><span style="padding-left:20px"><img src="https://www.logo.wine/a/logo/Gmail/Gmail-Logo.wine.svg" height="20px" width="20px"></span></a></li> 
+        <li style="padding-top: 5px;">Varun Nema<a href="mailto:Nemavarun5@gmail.com"><span style="padding-left:20px"><img src="https://www.logo.wine/a/logo/Gmail/Gmail-Logo.wine.svg" height="20px" width="20px"></span></a></li>
+        <li style="padding-top: 5px;">Vedika Garg<a href="mailto:vedika2.garg@gmail.com"><span style="padding-left:20px"><img src="https://www.logo.wine/a/logo/Gmail/Gmail-Logo.wine.svg" height="20px" width="20px"></span></a></li>
+        <li style="padding-top: 5px;">Uditanshu Shrivastav<a href="mailto:Uditanshu.v@gmail.com@gmail.com"><span style="padding-left:20px"><img src="https://www.logo.wine/a/logo/Gmail/Gmail-Logo.wine.svg" height="20px" width="20px"></span></a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

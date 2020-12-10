@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>Text Summarizer</title>
+	<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='tsum.css')}}">
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='tsum.png')}}">
+</head>
+<body>
+<div id="container" style="height: 1000px;">
+	<div id="header">
+    <div id="ascan" style="float: left; height:100px; width: 200px; background-color: white;">
+    	<div style="float: left">
+        <img src="https://image.freepik.com/free-vector/letter-logo-design-template_23987-86.jpg" height="90px;" width="80px;">
+        </div>
+        <div style="width:200px;font-family: muli,arial,helvetica,sans-serif; font-size: 30px; font-weight:600; margin-top:32px;margin-left: 60px; color: #0b8bc3">AllScan</div>
+    </div>
+	<div id="menu">
+	<ul>
+		<li><a href="{{ url_for('imagetotext') }}">Text Scanner</a></li>
+		<li><a href="{{ url_for('imagetopdf') }}">PDF Convertor</a></li>
+		<li><a href="{{ url_for('tsum') }}">Text Summarizer</a></li>
+	    <li><a href="{{ url_for('qr') }}">QR Code Scanner</a></li>
+		<li><a href="{{ url_for('about') }}">About Us</a></li>
+	</ul>
+	</div>
+	</div>
+	<div id="tsum-cont" style="height: 600px;width: 1325px;">
+	<div id="left" class="column">
+	<form id="connect" action="{{url_for('submit')}}" method="POST" enctype="multipart/form-data">
+		<h1 class='text-dark text-center' style="font-family: muli,arial,helvetica,sans-serif;">Put Text in Summarizer</h1><br><br>
+		<textarea name="text" rows="10" cols="50" placeholder=" Enter the text you want to summarize"></textarea><br><br><br>
+    <span style="margin-left: 250px;"><input onclick="" type="submit" class='upload-btn-wrapper btn' value="Summarize" style="font-size: 18px;">
+	</span>
+	</form></div>
+	<div id="right" class="column">
+	<form id="connect1" action="{{url_for('submit1')}}" method="POST" enctype="multipart/form-data">
+		<h1 class='text-dark text-center' style="font-family: muli,arial,helvetica,sans-serif;">Put link in Summarizer</h1><br><br>
+		<textarea name="text" rows="10" cols="50" placeholder=" Enter the required link "></textarea>
+		<br><br><br>
+    <span style="margin-left: 250px;"><input onclick="" type="submit" class='upload-btn-wrapper btn' value="Summarize" style="font-size: 18px;">
+	</span>
+	</form></div>
+    </div>
+    <hr class="new">
+      <div style="height:200px; margin-top: 50px;">
+        <span style="margin-left: 250px;"><img src="https://tmgufrpe.github.io/img/projects/summarization.png" height="200px" width="250px"></span>
+        <span style="height: 150px; width: 500px; float: right; margin-right:150px;">
+          <p>
+          <h3>How to operate the text summarizer:</h3>
+          <ol>
+            <li>If you wish to summarize the text then :</li>
+            <li>Add the text in the given box and click on the summarize button</li>
+            <li>If you wish to summarize the text present in a link then :</li>
+            <li>Add the link in the given box and click on the summarize button</li>
+            <li>The result will be displayed in the box below selected function</li>
+          </ol>
+          </p>
+        </span>
+      </div>
+</div>
+</body>
+</html>

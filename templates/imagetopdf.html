@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PDF Convertor</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='imgtopdf.css')}}">
+  <link rel="icon" type="image/png" href="{{url_for('static',filename='pdf.png')}}">
+  <style>
+    hr.new
+    {
+      border-top: 1px dashed #686868;
+      margin-top: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <div id="ascan" style="float: left; height:100px; width: 200px; background-color: white;">
+      <div style="float: left">
+        <img src="https://image.freepik.com/free-vector/letter-logo-design-template_23987-86.jpg" height="90px;" width="80px;">
+        </div>
+        <div style="width:200px;font-family: muli,arial,helvetica,sans-serif; font-size: 30px; font-weight:600; margin-top:32px;margin-left: 60px; color: #0b8bc3">AllScan</div>
+    </div>
+      <div id="menu">
+        <ul>
+          <li><a href="{{ url_for('imagetotext') }}">Text Scanner</a></li>
+          <li><a href="{{ url_for('imagetopdf') }}">PDF Convertor</a></li>
+          <li><a href="{{ url_for('tsum') }}">Text Summarizer</a></li>
+          <li><a href="{{ url_for('qr') }}">QR Code Scanner</a></li>
+          <li><a href="{{ url_for('about') }}">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="head"><h1 class='text-dark text-center' style="font-family: 'Ubuntu', sans-serif; margin-left: 36px;"> Convert Text Images To Scanned Pdf Document</h1><br></div>
+      <div id='cont'>
+        <!-- File Uploading-->
+        <div style="height: 40px;"></div>
+        <form class='container text-center' action='/uploadimages' method="POST" enctype="multipart/form-data"style="margin-left: 190px;">
+          <div class="upload-btn-wrapper" style="padding-left: 30px;">
+          <button class="btn">Choose files</button>
+          <input type="file" name="files" multiple />
+          </div>
+        	<br><br>
+          <span></span> 
+        	<input type="submit" class='upload-btn-wrapper btn' value="Upload and Download" style="font-size: 18px;">
+          </span>
+        </form>
+        <br><br>
+       </div>
+       <hr class="new">
+      <div style="height:200px; margin-top: 50px;">
+        <span style="margin-left: 200px;"><img src="https://smallpdf.com/build/3982ce4502a0be4d1471ef34a9376e4f.svg" height="150px" width="300px"></span>
+        <span style="height: 150px; width: 500px; float: right; margin-right:200px;">
+          <p>
+          <h3>How to operate the pdf convertor:</h3>
+          <ol>
+            <li>Click on the choose files button</li>
+            <li>Select the files from your device</li>
+            <li>Click on the upload and download button</li>
+            <li>The required file gets downloaded on your device</li>
+          </ol>
+          </p>
+        </span>
+      </div>
+   </div>
+</body>
+</html>

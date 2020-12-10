@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='wbcam.css')}}">
+	<style>
+		#buttons
+		{
+			height: 100px;
+			width: 1325px;
+			padding-left:200px;
+		}
+		#buttons a
+		{
+			width: 120px;
+			margin-left: 45px;
+		}
+		#buttons a:link, a:visited 
+		{
+            background-color: white;
+            color: black;
+            border: 2px solid #009199;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        #buttons a:hover, a:active 
+        {
+        	background-color: #009199;
+        	color: white;
+        }
+	</style>
+</head>
+<body>
+<div id="container">
+	<div id="header">
+    <div>
+		<div id="clg"><h1>&nbsp; AllScan</h1></div>
+	</div>
+	<div id="menu">
+	<ul>
+		<li><a href="{{ url_for('index') }}">Home</a></li>
+		<li><a href="{{ url_for('imagetotext') }}">Text Scanner</a></li>
+		<li><a href="{{ url_for('imagetopdf') }}">PDF Convertor</a></li>
+		<li><a href="{{ url_for('tsum') }}">Text Summarizer</a></li>
+		<li><a href="{{ url_for('qr') }}">QR Code Scanner</a></li>
+	</ul>
+	</div>
+	</div>
+	<div id="ab_cam"></div>
+	<div id="cam_container">
+		<video autoplay="true" id="videoElement">
+    </video>
+	</div>
+	<div style="height: 70px;"></div>
+	<div id="buttons">
+			<a href="{{ url_for('imagetotext') }}">Text Scanner</a>&nbsp;&nbsp;&nbsp;
+			<a href="{{ url_for('imagetopdf') }}">PDF Convertor</a>&nbsp;&nbsp;&nbsp;
+	</div>
+</div>
+</body>
+</html>
